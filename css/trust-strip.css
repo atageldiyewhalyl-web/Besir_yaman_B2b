@@ -1,0 +1,233 @@
+/* Trust Strip Section */
+.trust-strip {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, var(--color-bg) 0%, #ffffff 100%);
+}
+
+/* Layer 1: Statistics */
+.trust-stats {
+    background-color: transparent;
+    position: relative;
+    padding: 2rem 0 1rem 0;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* Stats Scrolling Container */
+.stats-container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 1rem;
+    /* Soft edges for the scrolling container */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.stats-track {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0; 
+    width: max-content;
+    animation: scrollStatsReverse 40s linear infinite; /* Reversed direction */
+}
+
+.stats-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollStatsReverse {
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px; /* Ensure uniform spacing for scrolling */
+}
+
+.stat-value {
+    font-size: 1.4rem; /* Slightly larger for the track */
+    font-weight: 700;
+    color: var(--color-dmf, #7ab528);
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-bg-dark, #1D1E23);
+    font-weight: 600;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 30px;
+    background-color: rgba(122, 181, 40, 0.3); /* Softer divider color */
+    margin: 0 3rem; /* Generous gap between icons */
+}
+
+/* Layer 2: Logos */
+.trust-logos {
+    background-color: transparent; /* Removed white block background */
+    padding: 2rem 0; /* Updated padding for modern feel */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trust-logos-title {
+    font-size: 0.7rem; /* Reduced from 0.75rem */
+    color: #64748b;
+    margin-bottom: 0.75rem; /* Further reduced from 1rem */
+    text-align: center;
+}
+
+/* Logo Scrolling Container */
+.logos-container {
+    width: 100%;
+    max-width: var(--container-width);
+    overflow: hidden;
+    position: relative;
+    padding: 0 1rem;
+    /* Soft edges for the scrolling container */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logos-track {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem; /* Further reduced from 3rem */
+    width: max-content;
+    animation: scrollLogos 30s linear infinite;
+}
+
+.logos-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-50% - 1.25rem), 0, 0); /* Adjusted for 2.5rem gap */
+    }
+}
+
+.logo-item {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, color 0.3s ease;
+    user-select: none;
+    letter-spacing: 0.5px;
+}
+
+.logo-item:hover {
+    opacity: 1;
+    color: #1D1E23;
+}
+
+.logo-image-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px; /* Further reduced from 44px */
+    width: 130px; /* Further reduced from 160px */
+    transition: transform 0.3s ease;
+    user-select: none;
+    padding: 0 0.5rem; 
+}
+
+.logo-image-item:hover {
+    transform: scale(1.05);
+}
+
+.logo-image-item img {
+    max-height: 24px; /* Further reduced from 36px */
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Reverse Animation Track */
+@keyframes scrollLogosReverse {
+    0% {
+        transform: translate3d(calc(-50% - 2rem), 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.logos-track.track-reverse {
+    /* If we use direction it might be simpler, or just a different animation.
+       Reverse play direction doesn't work perfectly if start position is 0,
+       but scrollLogosReverse is exactly the opposite keyframes */
+    animation: scrollLogosReverse 30s linear infinite;
+}
+
+.logos-track.track-reverse:hover {
+    animation-play-state: paused;
+}
+
+/* Helper utilities used in HTML */
+.mb-6 { margin-bottom: 1.5rem; }
+.text-center { text-align: center; }
+.font-bold { font-weight: 700; }
+.text-gray-500 { color: #6b7280; }
+.whitespace-nowrap { white-space: nowrap; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .trust-strip {
+        max-height: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image-item {
+        width: 100px;
+        height: 28px;
+    }
+
+    .logo-image-item img {
+        max-height: 20px;
+    }
+
+    .stat-item {
+        min-width: 160px; /* Slimmer for small phones */
+    }
+
+    .stat-value {
+        font-size: 1.2rem;
+    }
+
+    .stat-divider {
+        margin: 0 1.5rem; /* Tighter gap on small phones */
+    }
+}

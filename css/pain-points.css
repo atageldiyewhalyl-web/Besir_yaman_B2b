@@ -1,0 +1,288 @@
+/* Pain Points Section - Pinned Stage Layout */
+.pain-points-section {
+    position: relative;
+    height: 600vh; /* Increased from 450vh to slow down transition sensitivity */
+    clip-path: inset(0);
+}
+
+.pain-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+    max-width: var(--container-width);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header stays locked at the top of the sticky container */
+.pain-header-wrapper {
+    position: relative;
+    z-index: 100;
+    padding-top: 60px; /* Reduced from 140px to move title higher */
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+/* Add a mask below the header to ensure smooth vanishing if needed, otherwise transparent */
+.pain-header-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, transparent);
+    pointer-events: none;
+}
+
+.pain-section-title {
+    font-size: var(--heading-xl);
+    font-weight: 800;
+    color: var(--color-bg-dark);
+    margin: 0;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+.pain-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #7ab528;
+    border-radius: 2px;
+}
+
+/* The "Stage" where rows appear */
+.pain-zigzag {
+    flex: 1;
+    position: relative;
+    width: 100%;
+}
+
+.pain-row {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-40%); /* Center vertically in the remaining space */
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-slow), opacity var(--transition-base);
+}
+
+.pain-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* States controlled by JS */
+.pain-row.active {
+    opacity: 1;
+    transform: translateY(-50%);
+    pointer-events: auto;
+}
+
+.pain-row.past {
+    opacity: 0;
+    transform: translateY(-120%); /* Slide UP and vanish */
+}
+
+.pain-row.upcoming {
+    opacity: 0;
+    transform: translateY(20%); /* Wait BELOW center */
+}
+
+.pain-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pain-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 380px;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.05));
+}
+
+.pain-text {
+    flex: 1;
+    position: relative;
+}
+
+.pain-number {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    font-size: 10rem;
+    font-weight: 900;
+    color: rgba(122, 181, 40, 0.12);
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.pain-row.reverse .pain-number {
+    left: auto;
+    right: -20px;
+}
+
+.pain-headline {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--color-bg-dark);
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
+}
+
+.pain-subline {
+    font-size: 1.2rem;
+    color: var(--slate);
+    line-height: 1.7;
+    max-width: 520px;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+/* Closing Line - Sticks to the very end of the section scroll */
+.pain-closing {
+    position: absolute;
+    bottom: -100px; /* Hide initially */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10rem 0;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 110;
+}
+
+.pain-closing.visible {
+    opacity: 1;
+    transform: translateY(-100px);
+}
+
+.pain-closing p {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: var(--color-bg-dark);
+    letter-spacing: -1px;
+}
+
+.btn-pain {
+    background-color: var(--color-dmf) !important;
+    color: white !important;
+}
+
+.btn-pain:hover {
+    background-color: #6da224 !important;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .pain-points-section {
+        height: auto;
+    }
+
+    .pain-container {
+        position: relative;
+        height: auto;
+        padding-bottom: 4rem;
+        overflow: visible;
+    }
+
+    .pain-header-wrapper {
+        padding-top: 6rem;
+    }
+
+    .pain-zigzag {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .pain-row, .pain-row.reverse {
+        position: relative;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+        opacity: 1 !important;
+        pointer-events: auto;
+        transition: none !important; /* Disable all animation on mobile */
+    }
+
+    .pain-image img {
+        max-height: 280px;
+    }
+
+    .pain-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pain-number {
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 8rem;
+    }
+
+    .pain-row.reverse .pain-number {
+        right: auto;
+        left: 50%;
+    }
+
+    .pain-closing {
+        position: relative;
+        bottom: 0;
+        opacity: 1;
+        transform: none;
+        padding-top: 4rem;
+    }
+
+    .pain-closing p {
+        font-size: 1.5rem; /* Reduced from 2rem */
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pain-number {
+        font-size: 5rem;
+    }
+
+    .pain-zigzag {
+        gap: 4rem;
+    }
+
+    .pain-header-wrapper {
+        padding-top: 3rem;
+    }
+
+    .pain-closing p {
+        font-size: 1.25rem; /* Further reduced for small mobile */
+        margin-bottom: 1.5rem;
+    }
+}

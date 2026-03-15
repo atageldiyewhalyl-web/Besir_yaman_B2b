@@ -1,0 +1,215 @@
+/* Process Section */
+.process-section {
+    background-color: #ffffff;
+    padding: var(--section-padding);
+    overflow: hidden;
+}
+
+.process-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.process-title {
+    font-size: var(--heading-xl);
+    font-weight: 800;
+    color: var(--color-bg-dark);
+    letter-spacing: -1px;
+}
+
+.process-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    padding: 12rem 0; /* More padding for above/below space */
+    margin-bottom: 4rem;
+}
+
+/* Thick Green Connecting line */
+.process-grid::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background-color: var(--color-dmf, #7ab528);
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.process-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    min-height: 48px; /* Anchor height of node */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-slow);
+}
+
+.process-step.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.process-number {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-dmf, #7ab528);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1;
+    border: 6px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    flex-shrink: 0;
+    position: relative; /* Anchor point */
+}
+
+.process-content {
+    position: absolute;
+    text-align: center;
+    width: 280px; /* Wider for better text flow */
+    padding: 2rem 0;
+}
+
+/* Odd steps: content below node */
+.process-step:nth-child(odd) .process-content {
+    top: 48px; /* Height of node */
+    padding-top: 2rem;
+}
+
+/* Even steps: content above node */
+.process-step:nth-child(even) .process-content {
+    bottom: 48px; /* Height of node */
+    padding-bottom: 2rem;
+}
+
+.process-headline {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-bg-dark);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.process-text {
+    font-size: 0.95rem;
+    color: var(--slate);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.process-footer {
+    text-align: center;
+    margin-top: 6rem; /* Space for the bottom-aligned labels */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .process-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-section {
+        padding: 4rem 0;
+    }
+
+    .process-header {
+        margin-bottom: 3rem;
+    }
+
+    .process-grid {
+        flex-direction: column;
+        gap: 0;
+        padding: 2rem 0;
+    }
+
+    .process-grid::before {
+        left: 22px; /* Center of 48px circle (24px) minus half of 4px line width (2px) */
+        right: auto;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        height: 100%;
+        transform: none;
+    }
+
+    .process-step, .process-step:nth-child(even) {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .process-content {
+        position: relative !important;
+        top: auto !important;     /* Reset desktop offsets */
+        bottom: auto !important;  /* Reset desktop offsets */
+        text-align: left;
+        padding: 0;
+        margin: 0 !important;
+        width: 100%;
+        max-width: none;
+    }
+
+    .process-text {
+        max-width: none;
+        margin: 0;
+    }
+
+    .process-number {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        border-width: 4px; /* Slightly thinner border for mobile */
+    }
+
+    .process-footer {
+        margin-top: 1rem;
+    }
+
+    .process-footer .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-container {
+        padding: 0 1.25rem;
+    }
+
+    .process-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .process-footer {
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,286 @@
+.benefits-section {
+    background-color: #ffffff;
+    padding: 6rem 0;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px; /* Increased from 900px for grid */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.benefits-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-dmf, #7ab528);
+    margin-bottom: 1.5rem;
+}
+
+.benefits-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.04em;
+}
+
+/* Benefit Blocks */
+.benefits-list {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-areas: 
+        "card1 hero card3"
+        "card2 hero card4";
+    gap: 3rem;
+    align-items: center;
+}
+
+.benefit-block:nth-child(1) { grid-area: card1; margin-right: -5rem; z-index: 5; }
+.benefit-block:nth-child(2) { grid-area: card2; margin-right: -5rem; z-index: 5; }
+.benefit-hero-image { grid-area: hero; z-index: 10; }
+.benefit-block:nth-child(4) { grid-area: card3; margin-left: -5rem; z-index: 5; }
+.benefit-block:nth-child(5) { grid-area: card4; margin-left: -5rem; z-index: 5; }
+
+.benefit-block {
+    background: #f8fafc;
+    border: 1px solid #e8e8e8;
+    border-top: 3px solid var(--color-dmf, #7ab528);
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+}
+
+.benefit-block:first-child {
+    border-top: 3px solid var(--color-dmf, #7ab528); /* Restored for consistency */
+}
+
+.benefit-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-hero-image {
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.benefit-hero-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.benefit-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon-wrapper {
+    color: var(--color-dmf, #7ab528);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+}
+
+.benefit-number {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--color-dmf, #7ab528);
+    opacity: 0.04;
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.benefit-content {
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-headline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.benefit-text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+}
+
+/* Footer Section */
+.benefits-footer {
+    margin-top: 4rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.benefits-footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefits-closing {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    max-width: 750px;
+    margin: 0 auto 3.5rem auto;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.benefits-cta {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 1.4rem 3.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+}
+
+.benefits-cta:hover {
+    background-color: #333;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1100px) {
+    .benefits-list {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .benefits-list {
+        grid-template-columns: 1fr !important;
+        grid-template-areas: none !important; /* Reset areas */
+        gap: 1.5rem; /* Slightly more breathing room */
+    }
+    
+    .benefit-block, 
+    .benefit-hero-image {
+        grid-area: auto !important; /* Reset individual area assignments */
+    }
+
+    .benefit-hero-image {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-section {
+        padding: 4rem 0;
+    }
+
+    .benefits-title {
+        margin-bottom: 2rem;
+        font-size: 1.8rem; /* Scaled down for mobile */
+    }
+
+    .benefit-block {
+        padding: 1.25rem 1.5rem; /* Tighter padding for compact cards */
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 1rem; /* Row gap and column gap */
+        align-items: center;
+    }
+
+    .benefit-icon-wrapper {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-bottom: 0;
+        margin-top: 0;
+        flex-shrink: 0;
+    }
+
+    .benefit-content {
+        display: contents; /* Allows children to participate in the card's grid */
+    }
+
+    .benefit-headline {
+        grid-area: 1 / 2 / 2 / 3;
+        font-size: 1.15rem;
+        margin-bottom: 0; /* Handled by grid gap */
+    }
+
+    .benefit-text {
+        grid-area: 2 / 1 / 3 / 3; /* Spans both columns to start from far left */
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
+    }
+
+    .benefit-number {
+        font-size: 4rem;
+        bottom: 0.5rem;
+        right: 1rem;
+    }
+
+    .benefits-closing {
+        font-size: 1.35rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    .benefits-cta {
+        padding: 1.2rem 2rem;
+        font-size: 0.95rem;
+        width: 100%; /* Full width for easier tapping */
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Remove negative margins that cause overflow on mobile/tablet */
+    .benefit-block:nth-child(1),
+    .benefit-block:nth-child(2),
+    .benefit-block:nth-child(4),
+    .benefit-block:nth-child(5) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+

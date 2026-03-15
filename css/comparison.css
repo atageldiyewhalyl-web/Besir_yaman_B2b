@@ -1,0 +1,238 @@
+/* Industry Comparison Section */
+.comparison-section {
+    background-color: var(--color-bg);
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.comparison-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.comparison-header {
+    margin-bottom: 3.5rem;
+}
+
+.comparison-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--color-bg-dark);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-bg-dark);
+}
+
+/* Editorial Layout */
+.comparison-editorial {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 4rem;
+}
+
+.editorial-col {
+    flex: 1;
+    padding: 2rem;
+}
+
+.editorial-col--right {
+    background: rgba(122, 181, 40, 0.06);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.editorial-divider {
+    display: none;
+}
+
+.col-header {
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.col-bg-logo {
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    width: 70%;
+    opacity: 0.12;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.col-bg-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.col-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--slate);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.col-title {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-bg-dark);
+}
+
+/* List Styling */
+.editorial-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.editorial-list li {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.editorial-icon-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+}
+
+.indicator--pro .editorial-icon-marker {
+    color: var(--color-dmf);
+}
+
+.indicator--con .editorial-icon-marker {
+    color: #4b5563; /* More prominent slate gray */
+}
+
+.editorial-icon-marker svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2; /* Slightly thicker lines for prominence */
+}
+
+.list-content strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--color-bg-dark);
+}
+
+.list-content p {
+    font-size: 0.95rem;
+    color: var(--slate);
+    line-height: 1.4;
+    max-width: 320px;
+}
+
+/* Quote Section */
+.comparison-quote-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comparison-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: var(--color-bg-dark);
+    margin-bottom: 1.5rem;
+}
+
+.comparison-cite {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--slate);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .comparison-editorial {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison-editorial {
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .editorial-divider {
+        display: none;
+    }
+
+    .comparison-title {
+        font-size: clamp(1.6rem, 5vw, 3rem);
+    }
+
+    .col-header {
+        margin-bottom: 3rem;
+    }
+
+    .editorial-list {
+        gap: 2.5rem;
+    }
+
+    .list-content p {
+        max-width: 100%;
+    }
+
+    .comparison-quote {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .comparison-cite {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .comparison-container {
+        padding: 0 1.25rem;
+    }
+
+    .comparison-title {
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .comparison-quote {
+        font-size: 1.2rem;
+    }
+
+    .comparison-cite {
+        font-size: 0.75rem;
+    }
+}
+

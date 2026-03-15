@@ -1,0 +1,55 @@
+/* CSS for the Animated Background Paths */
+.bg-paths-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0); /* Hardware acceleration */
+}
+
+.bg-paths-reverse {
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
+.floating-paths-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #1e293b;
+    opacity: 0.9;
+    will-change: transform;
+}
+
+.floating-paths-svg path {
+    will-change: stroke-dashoffset, stroke-dasharray;
+}
+
+@keyframes drawPath {
+    0% {
+        stroke-dasharray: 0.3 1;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 1 1;
+        stroke-dashoffset: -1;
+    }
+    100% {
+        stroke-dasharray: 0.3 1;
+        stroke-dashoffset: -2;
+    }
+}
+
+@media (max-width: 768px) {
+    .bg-paths-container {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
+    .floating-paths-svg {
+        opacity: 0.5; /* Tone down on mobile — less visual noise on small screen */
+    }
+}

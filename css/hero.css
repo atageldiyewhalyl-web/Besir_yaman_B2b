@@ -1,0 +1,212 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    clip-path: inset(0);
+    padding-top: 160px;
+    /* Balanced space for floating nav */
+    padding-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 6rem;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    padding: 0 4rem;
+}
+
+/* Hide badge by default in desktop grid, it will be placed via grid-area if needed but for now it's inside hero-content on desktop */
+/* Wait, I moved it in HTML. Let's fix desktop placement too. */
+.intro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-bg-dark);
+    margin-bottom: 1rem;
+}
+
+/* Desktop: badge should be above title inside hero-content technically, 
+   but since I moved it to be a sibling of hero-content and image-wrapper, 
+   I should probably use grid-area or similar for desktop if I want it exactly there.
+   Let's just make it part of the hero-content stack on desktop if possible.
+*/
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 2rem 0;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
+    font-weight: 550;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.2px;
+    color: var(--color-bg-dark);
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-bg-dark);
+    max-width: 580px;
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+}
+
+.hero-description {
+    font-size: 0.9rem;
+    color: #8b95a8;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 580px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    width: 125%;
+    max-width: 150%;
+    max-height: 95vh;
+    object-fit: contain;
+    object-position: bottom center;
+    transform: translateX(-8%);
+}
+
+.image-accent {
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 85%;
+    background: #e5e5e5;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* For Desktop: Simplified layout since intro-badge is now inside hero-content again */
+@media (min-width: 993px) {
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .intro-badge {
+        display: none;
+    }
+
+    .hero-image-wrapper {
+        order: 2;
+        margin-bottom: 0.75rem; /* Tightened */
+        z-index: 2;
+    }
+
+    .hero-content {
+        order: 3;
+        text-align: center;
+        padding: 0 0 2rem; /* Reduced bottom padding */
+        max-width: 100%;
+        position: relative;
+        z-index: 3;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        letter-spacing: -0.8px;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        max-height: 55vh; /* Restored original height */
+        width: auto;
+        transform: translateX(0);
+    }
+
+    .image-accent {
+        left: 50%;
+        width: 80%;
+        height: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 60px; /* Aggressively reduced to lift content */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding-top: 45px; /* Even tighter for small screens */
+        padding-bottom: 1rem;
+    }
+
+    .hero-container {
+        gap: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+        line-height: 1.25;
+    }
+
+    .hero-content {
+        padding-bottom: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-image {
+        max-height: 50vh; /* Restored original height */
+    }
+}
