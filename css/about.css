@@ -281,14 +281,23 @@
     }
 
     .story-stats {
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem;
-        text-align: center;
+        flex-direction: row; /* Force side-by-side as requested */
+        justify-content: space-between;
+        padding: 1.25rem;
+        gap: 1rem;
+        text-align: left;
     }
 
     .stat-counter {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .stat-suffix {
+        font-size: 1rem;
+    }
+
+    .stat-desc {
+        font-size: 0.75rem;
     }
 
     .story-quote {
