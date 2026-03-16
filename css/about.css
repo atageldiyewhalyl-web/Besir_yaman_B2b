@@ -176,6 +176,13 @@
     line-height: 1;
 }
 
+.stat-prefix {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+    color: var(--color-bg-dark);
+}
+
 .stat-suffix {
     font-size: 1.5rem;
     font-weight: 700;
