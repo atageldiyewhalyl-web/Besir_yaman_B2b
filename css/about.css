@@ -150,7 +150,9 @@
 /* Stats */
 .story-stats {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
     padding: 3rem;
@@ -160,8 +162,10 @@
 }
 
 .stat-box {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0; /* Allow shrinking to prevent overflow */
 }
 
 .stat-number-wrapper {
