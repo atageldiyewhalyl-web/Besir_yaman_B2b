@@ -13,11 +13,12 @@
 
 .comparison-header {
     margin-bottom: 3.5rem;
+    text-align: center;
 }
 
 .comparison-title {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 800;
     color: var(--color-bg-dark);
     line-height: 1.1;
@@ -29,6 +30,7 @@
     width: 60px;
     height: 4px;
     background-color: var(--color-bg-dark);
+    margin: 0 auto;
 }
 
 /* Editorial Layout */
@@ -133,7 +135,7 @@
 .editorial-icon-marker svg {
     width: 28px;
     height: 28px;
-    stroke-width: 2; /* Slightly thicker lines for prominence */
+    stroke-width: 2;
 }
 
 .list-content strong {
@@ -149,6 +151,51 @@
     color: var(--slate);
     line-height: 1.4;
     max-width: 320px;
+}
+
+/* Vertical Marquee Scroll */
+.marquee-scroll {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+    z-index: 2;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-track {
+    display: flex;
+    flex-direction: column;
+    animation: marquee-up 25s linear infinite;
+}
+
+.marquee-track .editorial-list {
+    padding-bottom: 2rem;
+}
+
+.marquee-scroll:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
+    .marquee-scroll {
+        height: auto;
+        mask-image: none;
+        -webkit-mask-image: none;
+        overflow: visible;
+    }
 }
 
 /* Quote Section */
@@ -193,7 +240,12 @@
     }
 
     .comparison-title {
-        font-size: clamp(1.6rem, 5vw, 3rem);
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
+        line-height: 1.15;
+    }
+
+    .comparison-header {
+        margin-bottom: 2.5rem;
     }
 
     .col-header {
@@ -216,6 +268,10 @@
     .comparison-cite {
         font-size: 0.8rem;
     }
+
+    .marquee-scroll {
+        height: 360px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -224,7 +280,8 @@
     }
 
     .comparison-title {
-        font-size: clamp(1.4rem, 6vw, 2rem);
+        font-size: clamp(1.5rem, 7vw, 2rem);
+        letter-spacing: -0.03em;
     }
 
     .comparison-quote {
