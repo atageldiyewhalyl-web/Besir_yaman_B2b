@@ -39,11 +39,12 @@
 .benefits-list {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
-    grid-template-areas: 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
         "card1 hero card3"
         "card2 hero card4";
     gap: 3rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 .benefit-block:nth-child(1) { grid-area: card1; margin-right: -5rem; z-index: 5; }
@@ -133,7 +134,7 @@
 }
 
 .benefit-headline {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 1rem 0;
@@ -141,10 +142,10 @@
 }
 
 .benefit-text {
-    font-size: 1.05rem;
-    line-height: 1.5;
-    color: #666;
-    margin: 0;
+    font-size: 0.93rem;
+    line-height: 1.75;
+    color: #888;
+    margin: 0.5rem 0 0 0;
 }
 
 /* Footer Section */
