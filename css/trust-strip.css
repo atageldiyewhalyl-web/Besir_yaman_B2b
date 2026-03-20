@@ -230,4 +230,21 @@
     .stat-divider {
         margin: 0 1.5rem; /* Tighter gap on small phones */
     }
+
+    .stats-track, .logos-track, .logos-track.track-reverse {
+        /* Removed paused state */
+        will-change: transform;
+    }
+
+    .stats-track {
+        animation: scrollStatsReverse 45s linear infinite; /* Slowed down from 40s */
+    }
+
+    .logos-track {
+        animation: scrollLogos 35s linear infinite; /* Slowed down from 30s */
+    }
+
+    .logos-track.track-reverse {
+        animation: scrollLogosReverse 35s linear infinite; /* Slowed down from 30s */
+    }
 }

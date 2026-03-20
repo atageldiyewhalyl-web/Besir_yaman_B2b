@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | Besir Yaman</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #1a1c20;
+            --color-text-dim: #8b95a8;
+            --color-dmf: #7ab528;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .legal-container {
+            max-width: 800px;
+            margin: 120px auto 80px;
+            padding: 0 2rem;
+        }
+
+        .legal-header {
+            margin-bottom: 4rem;
+            border-left: 4px solid var(--color-dmf);
+            padding-left: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-dmf);
+            margin: 3rem 0 1.5rem;
+        }
+
+        p {
+            color: var(--color-text-dim);
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--color-dmf);
+        }
+
+        .back-link svg {
+            margin-right: 0.5rem;
+        }
+
+        .impressum-entry {
+            margin-bottom: 2rem;
+        }
+
+        .impressum-label {
+            display: block;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--color-text-dim);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="legal-container">
+        <a href="index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Zurück zur Startseite
+        </a>
+
+        <div class="legal-header">
+            <h1>Impressum</h1>
+        </div>
+
+        <div class="impressum-entry">
+            <h2>Angaben gemäß § 5 TMG</h2>
+            <p>
+                <strong>Max Mustermann</strong><br>
+                Musterstraße 12<br>
+                68159 Mannheim<br>
+                Deutschland
+            </p>
+        </div>
+
+        <div class="impressum-entry">
+            <span class="impressum-label">Kontakt</span>
+            <p>
+                Telefon: +49 123 456789<br>
+                E-Mail: <a href="mailto:max@beispiel.de" style="color: var(--color-dmf);">max@beispiel.de</a>
+            </p>
+        </div>
+
+        <div class="impressum-entry">
+            <span class="impressum-label">Umsatzsteuer-ID</span>
+            <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                DE123456789
+            </p>
+        </div>
+
+        <div class="impressum-entry">
+            <h2>Haftung für Inhalte</h2>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+        </div>
+
+        <div class="impressum-entry">
+            <h2>Urheberrecht</h2>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="legal-container" style="margin: 0 auto; padding: 0 2rem;">
+            &copy; 2026 Besir Yaman. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+</body>
+
+</html>

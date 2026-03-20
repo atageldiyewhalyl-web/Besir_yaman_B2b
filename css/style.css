@@ -148,7 +148,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-accent);
+    color: var(--color-dmf);
 }
 
 .nav-cta-btn {
@@ -165,9 +165,10 @@ body {
 }
 
 .nav-cta-btn:hover {
-    background-color: #333333;
+    background-color: var(--color-dmf);
+    color: #ffffff !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(122, 181, 40, 0.2);
 }
 
 /* Hamburger button — hidden on desktop */

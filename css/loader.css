@@ -1,0 +1,107 @@
+/* ── Modern Architectural Loader ── */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1c20;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Split-curtain reveal animation */
+#loader-wrapper::before,
+#loader-wrapper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #1a1c20;
+    transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+    z-index: -1;
+}
+
+#loader-wrapper::before { top: 0; }
+#loader-wrapper::after { bottom: 0; }
+
+#loader-wrapper.loaded::before { transform: translateY(-100%); }
+#loader-wrapper.loaded::after { transform: translateY(100%); }
+#loader-wrapper.loaded { 
+    background-color: transparent;
+    pointer-events: none;
+}
+
+/* ── Content ── */
+.loader-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+#loader-wrapper.loaded .loader-content {
+    opacity: 0;
+}
+
+/* Horizontal lines */
+.loader-line {
+    width: 0;
+    height: 1px;
+    background-color: #7ab528;
+    animation: growLine 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.loader-line.top { margin-bottom: 1.5rem; }
+.loader-line.bottom { margin-top: 1.5rem; animation-delay: 0.2s; }
+
+@keyframes growLine {
+    to { width: 100%; min-width: 250px; maxWidth: 400px; }
+}
+
+/* Text reveal */
+.loader-text-wrap {
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.loader-name {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    margin: 0;
+    transform: translateY(110%);
+    animation: revealText 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s;
+}
+
+@keyframes revealText {
+    to { transform: translateY(0); }
+}
+
+.loader-tagline {
+    font-family: 'Inter', sans-serif;
+    color: #8b95a8;
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards 1.6s;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Body lock */
+body.loading {
+    overflow: hidden;
+}
