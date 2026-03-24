@@ -215,17 +215,18 @@
 }
 
 /* Frag mich Proof */
-.frag-mich-proof {
+.frag-mich-proof-final {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 1.5rem auto;
-    color: var(--slate);
-    font-size: 1.05rem;
-    line-height: 1.6;
+    max-width: 850px;
+    margin: 2.5rem auto 3.5rem auto;
+    color: var(--color-bg-dark);
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
-.frag-mich-proof strong {
-    color: var(--color-bg-dark);
+.frag-mich-proof-final strong {
+    color: var(--color-dmf);
+    font-weight: 800;
 }
 
 /* Frag mich Block */
