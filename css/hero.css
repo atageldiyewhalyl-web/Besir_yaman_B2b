@@ -178,6 +178,10 @@
     color: var(--color-bg-dark);
 }
 
+.mobile-text {
+    display: none;
+}
+
 
 .hero-description {
     font-size: 1.0rem;
@@ -359,6 +363,38 @@
 
     .hero-subtitle {
         font-size: 0.95rem;
+    }
+
+    /* Mobile Optimized Social Proof Badge */
+    .hero-social-proof {
+        gap: 0.85rem;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        margin-top: 1.5rem;
+        max-width: 95%; /* Avoid touching edges */
+    }
+
+    .hero-avatar {
+        width: 44px;
+        height: 44px;
+        margin-left: -12px;
+        border-width: 2px;
+    }
+
+    .hero-social-text p {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-social-text strong {
+        font-size: 0.9rem;
+    }
+
+    .desktop-text {
+        display: none;
+    }
+
+    .mobile-text {
+        display: inline;
     }
 
     .hero-image {
