@@ -28,15 +28,14 @@
 </head>
 
 <body class="loading">
-    <!-- Architectural Reveal Loader -->
+    <!-- Premium Loader -->
     <div id="loader-wrapper">
         <div class="loader-content">
-            <div class="loader-line top"></div>
+            <img class="loader-logo" src="img/by-cropped-logo.png" alt="BY">
             <div class="loader-text-wrap">
                 <h1 class="loader-name">BESIR YAMAN</h1>
             </div>
-            <div class="loader-line bottom"></div>
-            <p class="loader-tagline">EXPERT MENTORING</p>
+            <div class="loader-underline"></div>
         </div>
     </div>
     <nav class="navbar">
@@ -72,8 +71,8 @@
                     </div>
                     <div class="hero-highlight-divider"></div>
                     <div class="hero-highlight-item">
-                        <span class="hero-highlight-value">Hohe</span>
-                        <span class="hero-highlight-label">Vertragsdichte</span>
+                        <span class="hero-highlight-value">100%</span>
+                        <span class="hero-highlight-label">Unabhängigkeit</span>
                     </div>
                     <div class="hero-highlight-divider"></div>
                     <div class="hero-highlight-item">
@@ -119,11 +118,7 @@
                     <div class="stats-track">
                         <!-- First Set -->
                         <div class="stat-item">
-                            <span class="stat-value">15 Mio. €</span>
-                            <span class="stat-label">Persönliches Volumen</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
+
                             <span class="stat-value">300+</span>
                             <span class="stat-label">Produktpartner</span>
                         </div>
@@ -296,13 +291,14 @@
                     </div>
 
                     <!-- Animated Stats -->
+                    <h4 class="story-stats-title">Meine Zahlen</h4>
                     <div class="story-stats" id="story-stats">
                         <div class="stat-box">
                             <div class="stat-number-wrapper">
                                 <span class="stat-counter" data-target="15">0</span>
                                 <span class="stat-suffix">Mio. €</span>
                             </div>
-                            <div class="stat-desc">Umsatzvolumen</div>
+                            <div class="stat-desc">Persönliches Umsatzvolumen</div>
                         </div>
                         <div class="stat-box">
                             <div class="stat-number-wrapper">
@@ -504,7 +500,7 @@
                                             </svg>
                                         </div>
                                         <div class="list-content">
-                                            <strong>Maximal Frei</strong>
+                                            <strong>100% Unabhängig</strong>
                                             <p>300+ Partner & absolute objektive Beratung.</p>
                                         </div>
                                     </li>
@@ -617,7 +613,7 @@
                                             </svg>
                                         </div>
                                         <div class="list-content">
-                                            <strong>Maximal Frei</strong>
+                                            <strong>100% Unabhängig</strong>
                                             <p>300+ Partner & absolute objektive Beratung.</p>
                                         </div>
                                     </li>
@@ -736,7 +732,7 @@
             <div class="bg-paths-container"></div>
             <div class="benefits-container">
                 <span class="benefits-label">IHR VORTEIL</span>
-                <h2 class="benefits-title">Was Sie bei mir bekommen, das andere nicht bieten können</h2>
+                <h2 class="benefits-title">Dein persönlicher Mehrwert in unserem Team – weg vom Standard, hin zu nachweisbaren Ergebnissen</h2>
 
                 <div class="benefits-list">
                     <!-- Block 01 -->
@@ -831,7 +827,7 @@
             <div class="process-container">
                 <div class="process-header">
                     <span class="section-badge">Der nächste Schritt</span>
-                    <h2 class="process-title">Ihr Weg zu uns in vier Schritten</h2>
+                    <h2 class="process-title">Ihr Weg zu Unabhängigkeit in vier Schritten</h2>
                 </div>
 
                 <div class="process-grid">
@@ -873,6 +869,20 @@
                                 persönlich. Kein Schritt allein.</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Frag mich Block -->
+                <div class="frag-mich-box">
+                    <div class="frag-mich-header">
+                        <h3 class="frag-mich-title">Frag mich im Erstgespräch:</h3>
+                    </div>
+                    <ul class="frag-mich-list">
+                        <li>Wie brauchen deine Privatkunden keinen Steuerberater mehr?</li>
+                        <li>Wie habe ich in 1 Jahr 15 Mio. € BWS geschrieben?</li>
+                        <li>Ob es in deiner Stadt einen Partner-Anwalt gibt?</li>
+                        <li>Warum erstellen wir dir eine Webseite, die verkauft?</li>
+                        <li>Welche Berater aus deiner jetzigen Firma bereits in die Unabhängigkeit gewechselt sind?</li>
+                    </ul>
                 </div>
 
                 <div class="process-footer">
@@ -1036,22 +1046,26 @@
         });
 
         // ── Loader Transition ──
-        window.addEventListener('load', function() {
+        ;(function() {
             const loader = document.getElementById('loader-wrapper');
             const body = document.body;
-            
-            // Artificial delay to ensure animation feels "complete" 
-            // especially on fast connections
-            setTimeout(() => {
+
+            const pageLoaded = new Promise(resolve => {
+                if (document.readyState === 'complete') resolve();
+                else window.addEventListener('load', resolve);
+            });
+            const minDelay = new Promise(resolve => setTimeout(resolve, 2200));
+
+            Promise.all([pageLoaded, minDelay]).then(() => {
                 loader.classList.add('loaded');
                 body.classList.remove('loading');
-                
-                // Remove from DOM after transition for performance
+
+                // Remove from DOM after curtain transition completes
                 setTimeout(() => {
                     loader.style.display = 'none';
-                }, 800);
-            }, 2800); // Wait for signature animation (2.5s) + buffer
-        });
+                }, 950);
+            });
+        })();
     </script>
     <a href="https://wa.me/4917622366342" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
         <svg class="whatsapp-icon" viewBox="0 0 448 512">

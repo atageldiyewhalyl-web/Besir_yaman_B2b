@@ -214,6 +214,19 @@ body {
         z-index: 999;
     }
 
+    .nav-brand {
+        gap: 0.5rem;
+    }
+
+    .nav-logo {
+        height: 72px; /* Super-sizing it on mobile */
+        margin: -4px 0;
+    }
+
+    .nav-name {
+        font-size: 1.3rem; /* Matching the scale */
+    }
+
     .nav-hamburger {
         display: flex;
         position: relative;
