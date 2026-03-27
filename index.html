@@ -4,8 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Besir Yaman | Finanzberater & Experte für Baufinanzierung</title>
+    <meta name="description" content="Besir Yaman – Mentor für Finanz- und Versicherungsvermittler. Jurist (LL.M.), Steuerexperte und Top-3-Unternehmer im Deutschen Maklerforum. Jetzt kostenloses Erstgespräch vereinbaren.">
+    <link rel="canonical" href="https://www.besiryaman-mentoring.de/">
+    <title>Besir Yaman | Mentor für Finanz- und Versicherungsvermittler</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Besir Yaman | Mentor für Finanz- und Versicherungsvermittler">
+    <meta property="og:description" content="Ich unterstütze erfahrene Versicherungsvermittler, den Schritt in die Unabhängigkeit zu gehen — mit System, Sicherheit und einem starken Partner im Rücken.">
+    <meta property="og:url" content="https://www.besiryaman-mentoring.de/">
+    <meta property="og:image" content="https://www.besiryaman-mentoring.de/img/og-preview.jpg">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Besir Yaman | Mentor für Finanz- und Versicherungsvermittler">
+    <meta name="twitter:description" content="Vom Steuerrecht in die Finanzberatung. Mentor, Jurist & Top-3-Unternehmer im Deutschen Maklerforum.">
+    <meta name="twitter:image" content="https://www.besiryaman-mentoring.de/img/og-preview.jpg">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/by-logo.png">
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="img/BY Transparent AI_2.png">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/background-paths.css">
     <link rel="stylesheet" href="css/trust-strip.css">
@@ -15,6 +35,7 @@
     <link rel="stylesheet" href="css/process.css">
     <link rel="stylesheet" href="css/benefits.css">
     <link rel="stylesheet" href="css/whatsapp.css">
+    <link rel="stylesheet" href="css/blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -44,10 +65,10 @@
         </div>
     </div>
     <nav class="navbar">
-        <div class="nav-brand">
+        <a href="#hero" class="nav-brand">
             <img src="img/by-cropped-logo.png" alt="BY Logo" class="nav-logo">
             <div class="nav-name">Besir Yaman</div>
-        </div>
+        </a>
         <button class="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false">
             <span></span>
             <span></span>
@@ -55,17 +76,19 @@
         </button>
         <ul class="nav-links">
             <li><a href="#ueber-mich" class="nav-link">Über mich</a></li>
-            <li><a href="#herausforderungen" class="nav-link">Herausforderungen</a></li>
             <li><a href="#moeglichkeiten" class="nav-link">Möglichkeiten</a></li>
             <li><a href="#benefits" class="nav-link">Vorteile</a></li>
-            <li><a href=""
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_USERNAME/erstgesprach'}); return false;"
-                    class="nav-cta-btn">Erstgespräch vereinbaren</a></li>
+            <li><a href="blog/index.html" class="nav-link">Blog</a></li>
         </ul>
+        <div class="nav-cta">
+            <a href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_USERNAME/erstgesprach'}); return false;"
+                class="nav-cta-btn">Erstgespräch vereinbaren</a>
+        </div>
     </nav>
 
     <main>
-        <section class="hero-section" style="position: relative;">
+        <section class="hero-section" id="hero" style="position: relative;">
             <div id="hero-background-paths" class="bg-paths-container"></div>
 
             <div class="hero-highlights-bar">
@@ -94,7 +117,7 @@
 
             <div class="hero-container" style="position: relative; z-index: 10;">
                 <div class="hero-image-wrapper">
-                    <img src="img/besir-abi.png" alt="Besir Yaman Portrait" class="hero-image">
+                    <img src="img/BY Transparent AI_2.png" alt="Besir Yaman Portrait" class="hero-image">
                     <div class="hero-backdrop-box"></div>
                 </div>
                 <div class="hero-content">
@@ -752,89 +775,92 @@
         <section class="benefits-section" id="benefits" style="position: relative; clip-path: inset(0);">
             <div class="bg-paths-container"></div>
             <div class="benefits-container">
-                <span class="benefits-label">IHR VORTEIL</span>
-                <h2 class="benefits-title">Dein persönlicher Mehrwert in unserem Team – weg vom Standard, hin zu nachweisbaren Ergebnissen</h2>
+                <span class="benefits-label">VORSPRUNG</span>
+                <h2 class="benefits-title">Dein Vorteil mit unserem Mentoring</h2>
 
                 <div class="benefits-list">
-                    <!-- Block 01 -->
-                    <div class="benefit-block">
-                        <div class="benefit-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" />
-                                <path d="m12 15 5 6H7l5-6z" />
-                            </svg>
+                    <!-- Block 01 - Featured -->
+                    <div class="benefit-block featured">
+                        <div class="benefit-header">
+                            <div class="benefit-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" />
+                                    <path d="m12 15 5 6H7l5-6z" />
+                                </svg>
+                            </div>
+                            <h3 class="benefit-headline">Ihr Akquise-Werkzeug: Steuerseminare</h3>
                         </div>
                         <span class="benefit-number">01</span>
                         <div class="benefit-content">
-                            <h3 class="benefit-headline">Steuerseminare für Privatkunden</h3>
-                            <p class="benefit-text">Durch regelmäßige Steuerseminare helfen wir Ihren Kunden dabei, bares Geld zu sparen und positionieren Sie als Berater, der echten Mehrwert liefert.</p>
+                            <p class="benefit-text">Durch unsere Steuerseminare gewinnen Sie neue Kunden, ganz ohne klassische Akquise. Sie positionieren sich als Berater, der echten Mehrwert liefert, und bauen Vertrauen auf, bevor das erste Beratungsgespräch stattfindet. Die Kunden kommen zu Ihnen.</p>
                         </div>
                     </div>
 
                     <!-- Block 02 -->
                     <div class="benefit-block">
-                        <div class="benefit-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                                <polyline points="14 2 14 8 20 8" />
-                                <path d="m9 15 2 2 4-4" />
-                            </svg>
+                        <div class="benefit-header">
+                            <div class="benefit-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                            </div>
+                            <h3 class="benefit-headline">Aus Ersparnis wird Abschluss</h3>
                         </div>
                         <span class="benefit-number">02</span>
                         <div class="benefit-content">
-                            <h3 class="benefit-headline">Mehrwert für Firmenkunden</h3>
-                            <p class="benefit-text">Ihre Gewerbekunden profitieren von exklusiver Expertise in Holdingstrukturen und steuerlicher Optimierung – durch unsere Partneranwälte und Steuerberater</p>
+                            <p class="benefit-text">Jeder eingesparte Euro ist ein potenzieller Beitrag für Altersvorsorge, Absicherung oder Vermögensaufbau. Und ein neuer Vertrag für Sie.</p>
                         </div>
-                    </div>
-
-                    <!-- Center Image -->
-                    <div class="benefit-hero-image" data-delay="300">
-                        <img loading="lazy" src="img/besir-abi-ihr-vorteil.png" alt="Besir Yaman">
                     </div>
 
                     <!-- Block 03 -->
                     <div class="benefit-block">
-                        <div class="benefit-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="2" y="7" width="20" height="14" rx="2" />
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                            </svg>
+                        <div class="benefit-header">
+                            <div class="benefit-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <path d="m9 15 2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="benefit-headline">Mehrwert für Firmenkunden</h3>
                         </div>
                         <span class="benefit-number">03</span>
                         <div class="benefit-content">
-                            <h3 class="benefit-headline">Aus Ersparnis wird Abschluss</h3>
-                            <p class="benefit-text">Jeder eingesparte Euro ist ein potenzieller Beitrag für Altersvorsorge, Absicherung oder Vermögensaufbau. Und ein neuer Vertrag für Sie.</p>
+                            <p class="benefit-text">Ihre Gewerbekunden profitieren von exklusiver Expertise in Holdingstrukturen und steuerlicher Optimierung, durch unsere Partneranwälte und Steuerberater.</p>
                         </div>
                     </div>
 
                     <!-- Block 04 -->
                     <div class="benefit-block">
-                        <div class="benefit-icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                <path d="M26 3.13a4 4 0 0 1 0 7.75" />
-                            </svg>
+                        <div class="benefit-header">
+                            <div class="benefit-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M26 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <h3 class="benefit-headline">Ein Team, kein Einzelkampf</h3>
                         </div>
                         <span class="benefit-number">04</span>
                         <div class="benefit-content">
-                            <h3 class="benefit-headline">Ein Team, kein Einzelkampf</h3>
                             <p class="benefit-text">Starkes Netzwerk aus erfahrenen Beratern, die voneinander lernen und gemeinsam wachsen.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="benefits-footer">
-                    <p class="benefits-closing">Andere bieten Ihnen ein System. Ich biete Ihnen ein System — und einen
+                    <p class="benefits-closing">Andere bieten Ihnen ein System. Ich biete Ihnen ein System und einen
                         echten Mehrwert für Ihre Kunden.</p>
                     <a href=""
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_USERNAME/erstgesprach'}); return false;"
@@ -1014,7 +1040,7 @@
         <!-- Footer Bottom Bar -->
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p class="footer-copyright">&copy; 2025 Besir Yaman. Alle Rechte vorbehalten.</p>
+                <p class="footer-copyright">&copy; 2026 Besir Yaman. Alle Rechte vorbehalten.</p>
                 <div class="footer-legal">
                     <a href="impressum.html">Impressum</a>
                     <a href="datenschutz.html">Datenschutz</a>
@@ -1032,12 +1058,13 @@
     <script>
         const hamburger = document.querySelector('.nav-hamburger');
         const navLinks = document.querySelector('.nav-links');
-        const navbar = document.querySelector('.navbar');
+        const navCta = document.querySelector('.nav-cta');
         let menuOpen = false;
 
         function openMenu() {
             menuOpen = true;
             navLinks.classList.add('nav-open');
+            navCta.classList.add('nav-open');
             hamburger.classList.add('is-active');
             hamburger.setAttribute('aria-expanded', 'true');
         }
@@ -1045,6 +1072,7 @@
         function closeMenu() {
             menuOpen = false;
             navLinks.classList.remove('nav-open');
+            navCta.classList.remove('nav-open');
             hamburger.classList.remove('is-active');
             hamburger.setAttribute('aria-expanded', 'false');
         }
@@ -1137,6 +1165,24 @@
                 banner.classList.remove('active');
             });
         });
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Besir Yaman",
+      "url": "https://www.besiryaman-mentoring.de",
+      "jobTitle": "Mentor für Finanz- und Versicherungsvermittler",
+      "description": "Jurist (LL.M.), Steuerexperte & Top-3-Unternehmer im Deutschen Maklerforum. Ich unterstütze Versicherungsvermittler auf dem Weg in die Unabhängigkeit.",
+      "telephone": "+4917622366342",
+      "email": "besiryaman@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/besiryaman/",
+        "https://www.instagram.com/besirlaw/"
+      ]
+    }
     </script>
 </body>
 
