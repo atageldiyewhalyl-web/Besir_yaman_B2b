@@ -74,16 +74,18 @@
             <span></span>
             <span></span>
         </button>
-        <ul class="nav-links">
-            <li><a href="#ueber-mich" class="nav-link">Über mich</a></li>
-            <li><a href="#moeglichkeiten" class="nav-link">Möglichkeiten</a></li>
-            <li><a href="#benefits" class="nav-link">Vorteile</a></li>
-            <li><a href="blog/index.html" class="nav-link">Blog</a></li>
-        </ul>
-        <div class="nav-cta">
-            <a href=""
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_USERNAME/erstgesprach'}); return false;"
-                class="nav-cta-btn">Kennenlerngespräch vereinbaren</a>
+        <div class="nav-menu-mobile">
+            <ul class="nav-links">
+                <li><a href="#ueber-mich" class="nav-link">Über mich</a></li>
+                <li><a href="#moeglichkeiten" class="nav-link">Möglichkeiten</a></li>
+                <li><a href="#benefits" class="nav-link">Vorteile</a></li>
+                <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_USERNAME/erstgesprach'}); return false;"
+                    class="nav-cta-btn">Kennenlerngespräch vereinbaren</a>
+            </div>
         </div>
     </nav>
 
@@ -1054,23 +1056,21 @@
     <script src="js/benefits.js"></script>
     <script src="js/process.js"></script>
     <script>
+        const navbar = document.querySelector('.navbar');
         const hamburger = document.querySelector('.nav-hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const navCta = document.querySelector('.nav-cta');
+        const navMenuMobile = document.querySelector('.nav-menu-mobile');
         let menuOpen = false;
 
         function openMenu() {
             menuOpen = true;
-            navLinks.classList.add('nav-open');
-            navCta.classList.add('nav-open');
+            navMenuMobile.classList.add('nav-open');
             hamburger.classList.add('is-active');
             hamburger.setAttribute('aria-expanded', 'true');
         }
 
         function closeMenu() {
             menuOpen = false;
-            navLinks.classList.remove('nav-open');
-            navCta.classList.remove('nav-open');
+            navMenuMobile.classList.remove('nav-open');
             hamburger.classList.remove('is-active');
             hamburger.setAttribute('aria-expanded', 'false');
         }

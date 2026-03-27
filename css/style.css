@@ -150,6 +150,10 @@ body {
     opacity: 0.9;
 }
 
+.nav-menu-mobile {
+    display: contents;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -257,85 +261,56 @@ body {
         z-index: 1001;
     }
 
-    .nav-links {
+    .nav-menu-mobile {
         display: none;
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background: #ffffff;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 1rem 1.5rem 0.5rem;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .nav-links.nav-open {
+    .nav-menu-mobile.nav-open {
         display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0 0;
+        gap: 0;
     }
 
     .nav-links li {
         width: 100%;
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1.25rem;
-        width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     }
 
-    /* Move CTA into the menu on mobile */
-    .nav-cta {
-        display: none; /* Hide on mobile by default */
-        width: 100%;
-        justify-content: center;
-        padding-top: 1rem;
-        background: #ffffff;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        padding-bottom: 2rem;
-        z-index: 998;
-    }
-
-    .nav-links.nav-open,
-    .nav-links.nav-open + .nav-cta {
-        display: flex;
-    }
-
-    .nav-links.nav-open {
-        padding-bottom: 0;
-        border-bottom: none;
-    }
-
-    .nav-cta a {
-        width: 80%;
-        text-align: center;
-    }
-
-    .nav-links li:last-child {
-        padding-top: 1rem;
-    }
-
     .nav-links a {
         display: block;
-        padding: 0.85rem 0;
+        padding: 1.2rem;
+        text-align: center;
+        width: 100%;
         font-size: 1.1rem;
-        text-decoration: none;
+    }
+
+    .nav-cta {
+        display: flex;
+        width: 100%;
+        padding: 1.5rem;
+        justify-content: center;
+        background: #fcfcfc;
     }
 
     .nav-cta-btn {
-        display: block;
+        width: 90%;
         text-align: center;
-        padding: 0.9rem 1.4rem !important;
-        width: 100%;
         background-color: var(--color-dmf) !important;
-        color: #ffffff !important;
     }
 }
 
