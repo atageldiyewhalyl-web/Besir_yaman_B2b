@@ -16,6 +16,47 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    z-index: 10;
+}
+
+.pain-certificate-hero {
+    min-height: 100vh; /* Increased from 80vh to allow more space for the caption */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    padding: 6rem 4rem;
+}
+
+.pain-certificate-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+.pain-certificate-full {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+}
+
+.pain-certificate-caption {
+    font-size: 1.1rem;
+    color: var(--slate);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.9;
 }
 
 /* Header stays locked at the top of the sticky container */
@@ -163,7 +204,7 @@
 /* Closing Line - Sticks to the very end of the section scroll */
 .pain-closing {
     position: absolute;
-    bottom: -100px; /* Hide initially */
+    bottom: -100px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -185,6 +226,8 @@
     color: var(--color-bg-dark);
     letter-spacing: -1px;
 }
+
+
 
 .btn-pain {
     background-color: var(--color-dmf) !important;

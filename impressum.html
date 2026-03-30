@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/loader.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --color-bg: #1a1c20;
@@ -59,6 +60,15 @@
             margin-bottom: 1.5rem;
         }
 
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 3.5rem 0 1.2rem;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+
         .back-link {
             display: inline-flex;
             align-items: center;
@@ -88,6 +98,34 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Compact styling for DMF section */
+        .dmf-compact {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 3rem;
+            margin-top: 4rem;
+        }
+
+        .dmf-compact h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .dmf-compact h3 {
+            font-size: 1rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        .dmf-compact p {
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
         footer {
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 4rem 0;
@@ -101,7 +139,11 @@
 <body>
     <div class="legal-container">
         <a href="index.html" class="back-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
             Zurück zur Startseite
         </a>
 
@@ -112,39 +154,195 @@
         <div class="impressum-entry">
             <h2>Angaben gemäß § 5 TMG</h2>
             <p>
-                <strong>Besir Yaman</strong><br>
-                <!-- TODO: Bitte gib deine genaue Geschäftsadresse ein -->
-                [Straße und Hausnummer]<br>
-                [PLZ und Ort]<br>
-                Deutschland
-            </p>
-        </div>
+                <strong>Besir Yaman Mentoring</strong><br>
+                <strong>Besir Yaman Akademie</strong><br><br>
 
-        <div class="impressum-entry">
-            <span class="impressum-label">Kontakt</span>
-            <p>
-                Telefon: +49 176 22366342<br>
-                E-Mail: <a href="mailto:besiryaman@gmail.com" style="color: var(--color-dmf);">besiryaman@gmail.com</a>
-            </p>
-        </div>
+                <strong>Inhaber:</strong> M. Besir Yaman LL.M. Heidelberg<br><br>
 
-        <div class="impressum-entry">
-            <span class="impressum-label">Umsatzsteuer-ID</span>
+                <strong>Rastatter Str. 38</strong><br>
+                68239 Mannheim, Deutschland<br><br>
+
+                <strong>Telefon:</strong> +49 176 22366342<br>
+                <strong>Website:</strong> <a href="https://www.besiryaman-mentoring.de"
+                    style="color: var(--color-dmf);">Besiryaman-mentoring.de</a><br><br>
+
+                <strong>Unternehmensform:</strong> Einzelunternehmen<br>
+                <strong>Tätigkeit:</strong> Unternehmensberatung, Mentoring
+            </p>
+
+            <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
             <p>
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-                <!-- TODO: Bitte trage deine USt-ID ein, sofern vorhanden -->
-                [Deine USt-ID]
+                M. Besir Yaman LL.M. Heidelberg<br>
+                Rastatter Str. 38<br>
+                68239 Mannheim
             </p>
         </div>
 
         <div class="impressum-entry">
             <h2>Haftung für Inhalte</h2>
-            <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den
+                allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet,
+                übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die
+                auf eine rechtswidrige Tätigkeit hinweisen.<br><br>
+                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
+                bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis
+                einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir
+                diese Inhalte umgehend entfernen.</p>
+
+            <h2>Haftung für Links</h2>
+            <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+                Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
+                verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen
+                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+                Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+
+            <p>Die Steuer- und Rechtsberatung erfolgt ausschließlich durch unsere Netzwerk-Anwälte. Wir selbst erbringen
+                keine Steuer- oder Rechtsberatung.</p>
+
         </div>
 
-        <div class="impressum-entry">
-            <h2>Urheberrecht</h2>
-            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+        <div class="dmf-compact">
+            <h2>Gesondertes Impressum gemäß Partnerschaft mit dem Deutschen Maklerforum (DMF)</h2>
+
+            <div class="impressum-entry">
+                <h3>Ich bin Handelsvertreter/in gemäß § 84 HGB und als solche/r für die Deutsches Maklerforum AG
+                    (Versicherungsmakler/in) tätig.</h3>
+                <p>
+                    <strong>Meine Anschrift:</strong><br>
+                    Besir Yaman<br>
+                    Rastatter Str. 38<br>
+                    68239 Mannheim<br>
+                    Telefon: +49 176 22366342<br>
+                    E-Mail: <a href="mailto:besir.yaman@deutsches-maklerforum.de"
+                        style="color: var(--color-dmf);">besir.yaman@deutsches-maklerforum.de</a>
+                </p>
+
+                <h3>Ich bin Versicherungsvermittler/in mit Erlaubnis nach §34 d Abs. 1 GewO (Versicherungsmakler/in),
+                    Bundesrepublik Deutschland.</h3>
+                <p>
+                    <strong>Register-Nr.</strong> D-RA1J-4410K-93<br><br>
+
+                    <strong>Aufsichtsbehörde:</strong><br>
+                    IHK Rhein-Neckar, L 1,2, 68161 Mannheim<br>
+                    Telefon: +49 621 1709-0<br>
+                    Telefax: +49 621 1709-100<br>
+                    <a href="https://www.rhein-neckar.ihk24.de" target="_blank"
+                        style="color: var(--color-dmf);">www.rhein-neckar.ihk24.de</a>
+                </p>
+
+                <h3>Vermittlerregister:</h3>
+                <p>
+                    Die Registrierung kann bei der gemeinsamen Stelle der Registrierungsbehörden nachgeprüft werden.<br>
+                    Deutsche Industrie- und Handelskammer (DIHK)<br>
+                    Breite Straße 29, 10178 Berlin<br>
+                    Telefon: +49 180 6005850<br>
+                    (Festpreis 0,20 €/Anruf; Mobilfunkpreise maximal 0,60 €/Anruf)<br>
+                    <a href="https://www.vermittlerregister.info" target="_blank"
+                        style="color: var(--color-dmf);">www.vermittlerregister.info</a>
+                </p>
+
+                <h3>Ich bin Mitglied der IHK Rhein-Neckar</h3>
+                <p>
+                    L 1,2, 68161 Mannheim<br>
+                    Telefon: +49 621 1709-0<br>
+                    Telefax: +49 621 1709-100<br>
+                    <a href="https://www.rhein-neckar.ihk24.de" target="_blank"
+                        style="color: var(--color-dmf);">www.rhein-neckar.ihk24.de</a>
+                </p>
+
+                <h3>Berufsrechtliche Regelungen:</h3>
+                <p>
+                    § 34 d GewO, §§ 59 - 68 VVG, VersVermV<br>
+                    Die berufsrechtlichen Regelungen können über die vom Bundesministerium der Justiz und von der juris
+                    GmbH betriebene Homepage <a href="https://www.gesetze-im-internet.de" target="_blank"
+                        style="color: var(--color-dmf);">www.gesetze-im-internet.de</a> eingesehen werden.
+                </p>
+
+                <h3>Beschwerdemanagement:</h3>
+                <p>
+                    Sie sind mit einem unserer Services nicht vollkommen zufrieden? Dann lassen Sie es uns bitte wissen.
+                    Ihre Zufriedenheit und die laufende Überprüfung unserer Prozesse sind uns sehr wichtig.<br>
+                    Deutsches Maklerforum AG, Ziegetsdorfer Straße 116, 93051 Regensburg<br>
+                    <a href="mailto:qm@deutsches-maklerforum.de"
+                        style="color: var(--color-dmf);">qm@deutsches-maklerforum.de</a><br>
+                    Telefon: +49 941 6022-240, Telefax: +49 941 6022-4240<br>
+                    Vielen Dank, dass Sie uns die Chance geben Ihre Beschwerde zu lösen.
+                </p>
+
+                <h3>Ombudsleute/Schlichtungsstellen:</h3>
+                <p>
+                    Versicherungsombudsmann e.V.<br>
+                    Postfach 080632, 10006 Berlin<br>
+                    <a href="https://www.versicherungsombudsmann.de" target="_blank"
+                        style="color: var(--color-dmf);">www.versicherungsombudsmann.de</a><br><br>
+
+                    Ombudsmann Private Kranken- und Pflegeversicherung<br>
+                    Postfach 060222, 10052 Berlin<br>
+                    <a href="https://www.pkv-ombudsmann.de" target="_blank"
+                        style="color: var(--color-dmf);">www.pkv-ombudsmann.de</a><br><br>
+
+                    Ich bin im Bereich der Versicherungsvermittlung verpflichtet, an einem Streitbeteiligungsverfahren
+                    vor einer nach § 214 VVG anerkannten Schlichtungsstelle teilzunehmen. Im Übrigen bin ich weder
+                    verpflichtet noch bereit, an einem Streitbeteiligungsverfahren vor einer
+                    Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+
+                <h3>Weitere Angaben der Deutsches Maklerforum AG:</h3>
+                <p>
+                    Die Deutsches Maklerforum AG ist Versicherungsvermittlerin mit Erlaubnis nach § 34 d Abs. 1 GewO,
+                    Bundesrepublik Deutschland (Versicherungsmaklerin)<br>
+                    <strong>Register-Nr.</strong> D-IVB1-FSV8K-48<br><br>
+
+                    <strong>Aufsichtsbehörde:</strong> Industrie- und Handelskammer für München und Oberbayern,
+                    Max-Joseph-Straße 2, 80333 München<br>
+                    <a href="https://www.ihk-muenchen.de" target="_blank"
+                        style="color: var(--color-dmf);">www.ihk-muenchen.de</a><br><br>
+
+                    Die TELIS FINANZ Vermittlung AG ist Finanzanlagenvermittlerin mit Erlaubnis nach § 34 f Abs. 1 GewO,
+                    Bundesrepublik Deutschland<br>
+                    <strong>Register-Nr.</strong> D-F-155-RDLQ-55<br><br>
+
+                    <strong>Aufsichtsbehörde:</strong> Industrie- und Handelskammer für München und Oberbayern,
+                    Max-Joseph-Straße 2, 80333 München<br>
+                    <a href="https://www.ihk-muenchen.de" target="_blank"
+                        style="color: var(--color-dmf);">www.ihk-muenchen.de</a><br><br>
+
+                    Die Deutsches Maklerforum AG ist als Finanzanlagenvermittlerin für diverse Produktpartner
+                    vermittelnd tätig.<br><br>
+
+                    Die Deutsches Maklerforum AG ist Immobiliardarlehensvermittlerin mit Erlaubnis nach § 34 i GewO,
+                    Bundesrepublik Deutschland.<br>
+                    <strong>Register-Nr.</strong> D-W-155-IHNS-80<br>
+                    <strong>Aufsichtsbehörde:</strong> IHK für München und Oberbayern
+                </p>
+
+                <h3>Berufsrechtliche Regelungen (AG):</h3>
+                <p>
+                    § 34 c GewO, § 34 d GewO, § 34 f GewO, §§ 59 – 68 VVG, VersVermV, FinVermV, MaBV, ImmVermV<br>
+                    Die berufsrechtlichen Regelungen können über <a href="https://www.gesetze-im-internet.de"
+                        target="_blank" style="color: var(--color-dmf);">www.gesetze-im-internet.de</a> eingesehen
+                    werden.
+                </p>
+
+                <h3>Inhalt des Onlineangebotes:</h3>
+                <p>Die Webseiten der TELIS FINANZ Vermittlung AG und ihrer Handelsvertreter werden permanent gepflegt.
+                    Sie werden mit größtmöglicher Sorgfalt erstellt. Dennoch kann der Anbieter keine Haftung für die
+                    Richtigkeit, Vollständigkeit and Aktualität der bereitgestellten Informationen übernehmen. Die
+                    Nutzung der Webseiten-Inhalte erfolgt auf eigene Gefahr.</p>
+
+                <h3>Verweise and Links:</h3>
+                <p>Die Webseite enthält Verlinkungen zu anderen Webseiten („externe Links“). Diese Webseiten unterliegen
+                    der Haftung der jeweiligen Seitenbetreiber. Bei Bekanntwerden von Rechtsverstößen werden die
+                    betroffenen externen Links unverzüglich gelöscht.</p>
+
+                <h3>Urheberrecht:</h3>
+                <p>Die auf dieser Webseite durch den Anbieter veröffentlichten Inhalte sind urheberrechtlich geschützt.
+                    Jede vom deutschen Urheberrecht nicht zugelassene Verwertung bedarf der vorherigen schriftlichen
+                    Zustimmung des Anbieters.</p>
+            </div>
         </div>
     </div>
 

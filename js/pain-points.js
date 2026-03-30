@@ -12,13 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Is the section in the "sticky" zone?
         if (rect.top <= 0 && rect.bottom >= viewportHeight) {
-            // Calculate progress through the section (0 to 1)
+            // Adjust for the hero section height (approx 100vh)
+            const heroHeight = viewportHeight;
             const totalScrollable = sectionHeight - viewportHeight;
-            const progress = Math.min(Math.max(-rect.top / totalScrollable, 0), 1);
+            
+            // We want the progress to be 0 until we've scrolled past the hero
+            let progress = Math.min(Math.max((-rect.top - heroHeight) / (totalScrollable - heroHeight), 0), 1);
             
             // Adjust divisor for more dwell time and room for the closing section
-            // A lower number here spreads the rows across less of the total scroll, 
-            // but increasing the section height in CSS is what really slows it down.
             const activeThreshold = 0.8; 
             const rowProgress = progress / activeThreshold;
             
