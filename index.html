@@ -42,7 +42,6 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&display=swap"
         rel="stylesheet">
     <!-- Calendly popup widget -->
-    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/cookie-banner.css">
     <!-- Vercel Analytics -->
     <script>
@@ -51,18 +50,7 @@
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
-<body class="loading">
-    <!-- Premium Loader -->
-    <div id="loader-wrapper">
-        <div class="loader-content">
-            <img class="loader-logo" src="img/by-cropped-logo.png" alt="BY">
-            <div class="loader-text-wrap">
-                <h1 class="loader-name">BESIR YAMAN</h1>
-            </div>
-            <div class="loader-underline"></div>
-        </div>
-    </div>
-    <nav class="navbar">
+<body>    <nav class="navbar">
         <a href="#hero" class="nav-brand">
             <img src="img/by-cropped-logo.png" alt="BY Logo" class="nav-logo">
             <div class="nav-name">Besir Yaman <span class="nav-title">LL.M. Heidelberg</span></div>
@@ -1070,27 +1058,6 @@
             }
         });
 
-        // ── Loader Transition ──
-        ;(function() {
-            const loader = document.getElementById('loader-wrapper');
-            const body = document.body;
-
-            const pageLoaded = new Promise(resolve => {
-                if (document.readyState === 'complete') resolve();
-                else window.addEventListener('load', resolve);
-            });
-            const minDelay = new Promise(resolve => setTimeout(resolve, 2200));
-
-            Promise.all([pageLoaded, minDelay]).then(() => {
-                loader.classList.add('loaded');
-                body.classList.remove('loading');
-
-                // Remove from DOM after curtain transition completes
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 950);
-            });
-        })();
     </script>
     <a href="https://wa.me/4917622366342?text=Hallo%20Besir%2C%20ich%20w%C3%BCrde%20dich%20gerne%20kennenlernen.%20Wann%20passt%20es%20dir%20am%20besten%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt">
         <svg class="whatsapp-icon" viewBox="0 0 448 512">
